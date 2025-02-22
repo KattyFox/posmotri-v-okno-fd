@@ -72,6 +72,18 @@ ol {
 
 }
 
+.content__list .custom-scrollbar{
+position: absolute;
+left: 2px;
+top: -270px;
+display: flex;
+width: 390px;
+flex-direction: column;
+align-items: flex-start;
+gap: 30px;
+}
+
+
 .content__list-container {
   display: flex;
   /*padding: 0; 
@@ -80,18 +92,19 @@ ol {
 
 .content__list-item {
   width: 100%; /* Занимает всю ширину контейнера */
+  margin-bottom: 30px;
 }
 
 .content__video-card {
   display: flex;
   align-items: flex-start; /* Выравниваем элементы по верхнему краю */
-  gap: 20px; /* Отступ между изображением и текстом */
+  
 }
 
 
 .content__video-card-thumbnail {
-  width: 150px;
-  height: 100px;
+  width: 194px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
   flex-direction: column;
@@ -109,7 +122,7 @@ flex-grow: 1;
   grid-template-rows: auto 1fr;*/
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  /*gap: 16px;*/
   width: 100%;
   margin-top: 78px;
 }
@@ -134,9 +147,11 @@ flex-grow: 1;
   flex-direction: column;
   /*justify-content: center;*/
   align-items: flex-start;  
-  height: 100%; 
-  width: 100%; 
+  /*height: 100%; если вот этот не убирать то фраза встает вверху как надо зато кнопка и весь контент подскакивает тоже*/
+  width: 100%;
+  min-width: 390px; 
   gap: 26px;
+  height: 534px;
 }
 
 .content__list-container {
@@ -147,9 +162,7 @@ flex-grow: 1;
   width: 100%;
 }
 
-.content__list-item img:not(:last-child) {
-  margin-bottom: 30px;
-}
+
 
 .search-form {
   display: inline-flex;
@@ -159,9 +172,11 @@ flex-grow: 1;
   gap: 5px;
   color: #FFF;
   height: 54px;
+
 }
 
-.search-form_fieldset {
+.search-form__fieldset {
+  border-style: none;
   
 }
 
@@ -169,14 +184,6 @@ flex-grow: 1;
 flex-shrink: 0;
 }
 
-h2.search-form__fieldset-title {
-color: #FFF;
-font-family: "Fira Sans Condensed";
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
 
 
 button {
@@ -239,11 +246,39 @@ color: #FFF;
 h2.content__video-card-title,
 p.content__video-card-description {
   color: #FFF;
+  font-style: normal;
+
+}
+
+h2.content__video-card-title {
+  text-transform: uppercase;
+  line-height: 100%; /* 30px */
+  min-width: 196px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: Oswald;
+  align-self: stretch;
+  
+}
+
+p.content__video-card-description {
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
+
 }
 
 
-
-
+h2.search-form__fieldset-title {
+  color: rgba(255, 255, 255, 0.70);
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  }
+  
 /*.content__video-card-title h2 {
 color: #FFF;
 font-family: Oswald;
@@ -253,3 +288,56 @@ font-weight: 700;
 line-height: 100%;
 text-transform: uppercase;
 }*/
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+
+.search-form__pseudo-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #FFF;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.search-form__label-text {
+  color: #FFF;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
