@@ -65,10 +65,9 @@ ol {
   grid-template-columns: 2fr 1fr;
   gap: 30px;
   width: 100%;
-  min-width: 1131px;
+  min-width: 1140px;
   margin: 133px 30px;
-  /*padding: 0;*/
-  height: 534px;
+  /*height: 534px;*/
   align-items: end;
 
 }
@@ -78,6 +77,26 @@ ol {
   text-decoration-color: none;
 }
 
+.content__card-link:focus {
+  outline: none; 
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #FFF;
+}
+
+.content__card-link_current {
+  background-color: rgba(255, 255, 255, 0.1); /* Фон для текущей карточки */
+}
+
+.content__card-link:hover .content__video-card-title,
+.content__card-link:hover .content__video-card-description {
+  text-decoration: underline; /* Подчёркивание текста при наведении */
+}
+
+.content__card-link:active .content__video-card {
+  background-color: rgba(255, 255, 255, 0.2); /* Изменение фона при нажатии */
+}
 
 .content__list .custom-scrollbar{
 position: absolute;
@@ -102,15 +121,18 @@ gap: 30px;
 }
 
 .content__list-item {
-  width: 100%; /* Занимает всю ширину контейнера */
+  width: 100%; 
   margin-bottom: 30px;
+  padding: 0 3px; /* Отступы слева и справа по заданию*/
+
 }
+
 
 .content__video-card {
   display: flex;
   flex-direction: row;
   align-items: flex-start; /* Выравниваем элементы по верхнему краю */
-  /*gap: 30px;*/
+  /*gap: 10px;*/
 }
 
 
@@ -121,7 +143,6 @@ gap: 30px;
   object-position: center;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
   align-self: stretch;
 }
 
@@ -258,6 +279,7 @@ text-transform: uppercase;
   display: inline-flex;
   justify-content: space-between;
   height: 54px;
+  cursor: pointer;
 }
 
 .search-form__fieldset {
@@ -269,39 +291,55 @@ text-transform: uppercase;
 }
 
 
-button {
+.button {
   display: flex;
   height: 34px;
   justify-content: center;
   align-items: center;
-  background: none;
+  background: transparent;
   color: #fff;
   border: 1px solid #FFF;
+  cursor: pointer;
+
 }
 
 .search-form__submit-button {
 display: flex;
-width: 194px;
-/*justify-content: center;
-align-items: center;*/
+min-width: 194px;
 gap: 10px;
 flex-shrink: 0;
 background: none;
 margin-top: auto;
+flex-shrink: 0;
+}
+
+.more-button {
+  align-self: stretch;
+  /*min-width: 390px;*/
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFF;
 }
 
 .search-form button {
   gap: 10px;
   flex-shrink: 0;
-  /*justify-content: center;
-  align-items: center;*/
-
 }
   
-button.more-button {
-  left: 2px;
-  top: -270px;  
-}
+
 
 .search-form__checkbox-list {
   display: flex;
@@ -317,17 +355,23 @@ button.more-button {
   height: 19px;
   border: 1px solid #FFF;
   background-color: transparent;
+  vertical-align: middle;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+.search-form__pseudo-checkbox::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  background-color: #FFF;
+  width: 15px; /* На 1 пиксель меньше, чем чекбокс */
+  height: 15px; /* На 1 пиксель меньше, чем чекбокс */
+  background-color: #FFF; /* Белый фон */
+  opacity: 0; /* По умолчанию скрыт */
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
 }
 
 .search-form__label {
@@ -335,6 +379,7 @@ button.more-button {
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  width: fit-content;
   /*border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;*/
 }
@@ -355,5 +400,28 @@ button.more-button {
 
 .search-form__textfield {
   color: rgba(255, 255, 255, 0.70);
-
+  background: none;
+  border: none;
+  height: 22px;
+  appearance: none;
 }
+
+.search-form__textfield:focus {
+  outline: none; /* Убираем стандартный outline */
+  border-color: rgba(255, 255, 255, 0.9); /* Изменяем цвет границы при фокусе */
+}
+
+.search-form__label:has(.search-form__textfield:focus-visible) {
+  border: 1px solid #FFF; /* Граница вокруг лейбла */
+  padding: 4px; /* Отступы для границы */
+}
+
+.search-form__label:has(.search-form__checkbox:focus-visible) {
+  outline: 1px solid #FFF; /* Граница вокруг лейбла */
+  padding: 4px; /* Отступы для границы */
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline; /* Подчёркивание текста при наведении */
+}
+
