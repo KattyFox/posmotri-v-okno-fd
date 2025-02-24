@@ -92,7 +92,7 @@ ol {
 }
 
 .content__list .custom-scrollbar {
-position: absolute;
+
 left: 2px;
 top: -270px;
 display: flex;
