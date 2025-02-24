@@ -280,7 +280,6 @@ h2.search-form__fieldset-title {
   line-height: normal;
   margin-bottom: 1px;
   margin-left: 1px;
-  margin-bottom: 1px;
 }
 
 .visually-hidden {
@@ -333,7 +332,6 @@ h2.search-form__fieldset-title {
 display: flex;
 min-width: 194px;
 gap: 10px;
-flex-shrink: 0;
 background: none;
 margin-top: auto;
 flex-shrink: 0;
@@ -387,7 +385,6 @@ flex-shrink: 0;
 
 .search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
