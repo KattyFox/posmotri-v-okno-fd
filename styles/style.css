@@ -170,9 +170,9 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  
+  align-items: flex-start;
   width: 100%;
-  min-width: 390px; 
+  min-width: 390px;
   height: 534px;
 }
 
