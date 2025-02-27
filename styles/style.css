@@ -13,14 +13,13 @@ html {
   justify-content: center;
   align-items: center;
   inline-size: 1200px;
-  width: 100%;
+  block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  box-sizing: border-box;
-  
+  padding: 133px 30px; 
 }
 
 h1,
@@ -61,17 +60,15 @@ ol {
   grid-template-areas:
   "result details"
   "result details";
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 711px 399px;
   gap: 30px;
-  width: 100%;
-  min-width: 1140px;
-  margin: 133px 30px;
+  /*width: 100%;*/
+  inline-size: 1140px;
   align-items: end;
 }
 
 .content__card-link {
   text-decoration: none;
-  text-decoration-color: none;
 }
 
 .content__card-link_current {
@@ -87,14 +84,14 @@ ol {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.content__list .custom-scrollbar {
+.content__list {
   left: 2px;
   top: -270px;
   display: flex;
   width: 390px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  /*gap: 30px;*/
 }
 
 .content__list-container {
@@ -110,10 +107,6 @@ ol {
   margin-bottom: 30px;
   padding: 0 3px;
 }
-  
-.content__list-item:focus-visible {
-  outline: none;
-}
 
 .content__video-card {
   display: flex;
@@ -121,11 +114,16 @@ ol {
   align-items: flex-start;
 }
 
+.content__card-link:focus {
+outline: none;
+}
+
 .content__card-link:focus-visible {
   outline-color: white;
-  outline-style: auto;
+  outline-style: solid;
   outline-width: 1px;
   outline-offset: 1px;
+
 }
 
 .content__video-card-thumbnail {
@@ -133,7 +131,9 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
   flex-direction: column;
+  /*gap: 6px;*/
   align-items: center;
   align-self: stretch;
 }
@@ -176,8 +176,8 @@ ol {
   height: 534px;
 }
 
-h1.title {
-  font-family: Oswald;
+.title {
+  font-family: Oswald, Arial, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -186,56 +186,18 @@ h1.title {
   margin-top: 2px;
 }
 
-h1 span {
+.title span {
   color: #545050;
-  font-family: Oswald;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 94%;
-  text-transform: uppercase;
 }
 
-h1.title .content__accent span {
-  color: #FFF;
-  font-family: Oswald;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 94%;
-  text-transform: uppercase;
-}
-
-h2.content__video-card-title,
-p.content__video-card-description {
-  color: #FFF;
-  font-style: normal;
-}
-
-.content__video-card-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-h2.content__video-card-title {
-  text-transform: uppercase;
-  line-height: 100%;
+.content__video-card h2 {
   min-width: 196px;
-  font-size: 30px;
-  font-weight: 700;
-  font-family: Oswald;
   align-self: stretch;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
-p.content__video-card-description {
-  font-family: "Fira Sans Condensed";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 16.2px;
-}
-
-h2.search-form__fieldset-title {
+/* Заголовок поля формы */
+.search-form__fieldset h2 {
   color: #fff;
   font-family: "Fira Sans Condensed";
   font-size: 18px;
@@ -244,6 +206,51 @@ h2.search-form__fieldset-title {
   line-height: normal;
   margin-bottom: 1px;
   margin-left: 1px;
+}
+
+.content__video-card-title {
+color: #FFF;
+font-family: Oswald, Arial, sans-serif;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 30px */
+text-transform: uppercase;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 196px;
+}
+
+
+/*h1.title {
+  color: #545050;
+}*/
+
+/*h1.title .content__accent span {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}*/
+
+.content__video-card-title {
+ 
+}
+
+.content__video-card-description {
+color: #FFF;
+font-family: "Fira Sans Condensed", Arial, sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 16.2px;
+white-space: normal;
+word-wrap: break-word;
+overflow-wrap: break-word;
+max-width: 100%; 
 }
 
 .visually-hidden {
