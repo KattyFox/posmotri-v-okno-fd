@@ -71,10 +71,6 @@ ol {
   text-decoration: none;
 }
 
-.content__card-link_current {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 .content__card-link:hover .content__video-card-title,
 .content__card-link:hover .content__video-card-description {
   text-decoration: underline;
@@ -266,8 +262,9 @@ max-width: 100%;
 .search-form {
   display: inline-flex;
   justify-content: space-between;
-  height: 54px;
+  /*height: 54px;*/
   cursor: pointer;
+  padding-top: 1px;
 }
 
 .search-form__fieldset {
@@ -298,10 +295,8 @@ max-width: 100%;
 .search-form__submit-button {
   display: flex;
   min-width: 194px;
-  gap: 10px;
   background: none;
   margin-top: auto;
-  flex-shrink: 0;
 }
 
 .more-button {
@@ -366,9 +361,32 @@ max-width: 100%;
   gap: 10px;
   cursor: pointer;
   width: fit-content;
+  color: #FFF;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.search-form__label .search-form__textfield {
+.search-form__textfield {
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  min-height: 26px;
+  min-width: 234px;
+  color: rgba(255, 255, 255, 0.70);
+  background: none;
+  border-left: none;
+  border-right: none;
+  font-family: "Fira Sans Condensed",Arial, sans-serif;
+  font: inherit;
+  line-height: normal;
+}
+
+.search-form__label-text {
+ font: inherit;
+}
+
+/*.search-form__label .search-form__textfield {
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
   height: 26px;
@@ -397,20 +415,27 @@ max-width: 100%;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
+}*/
 
 .search-form__textfield:focus {
   outline: none;
   border-color: rgba(255, 255, 255, 0.9);
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
+/*.search-form__label:has(.search-form__textfield:focus-visible) {
   border: 1px solid #FFF;
   padding: 4px;
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 1px solid #FFF;
+  padding: 4px;
+}
+
+}*/
+
+.search-form__label:has(:focus-visible) {
+  border: 1px solid #FFF;
   padding: 4px;
 }
 
