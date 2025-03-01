@@ -319,7 +319,7 @@ max-width: 196px;
   align-items: center;
   width: 19px;
   height: 19px;
-  border: 1px solid #FFF;
+  outline: 1px solid #FFF;
   background-color: transparent;
   vertical-align: middle;
 }
@@ -378,8 +378,8 @@ max-width: 196px;
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #FFF;
-padding: 4px;
+  outline: 1px solid #FFF;
+  padding: 4px;
 }
 
 .search-form__label:hover .search-form__label-text {
