@@ -20,7 +20,7 @@ html {
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  padding: 133px 30px; 
+  padding: 133px 30px;
 }
 
 h1,
@@ -109,6 +109,11 @@ ol {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  min-width: 196px;
+  align-self: stretch;
+  color: #FFF;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-style: normal;
 }
 
 .content__video-card:focus {
@@ -186,13 +191,7 @@ outline: none;
   color: #545050;
 }
 
-.content__video-card {
-  min-width: 196px;
-  align-self: stretch;
-  color: #FFF;
-  font-family: 'Oswald', Arial, sans-serif;
-  font-style: normal;
-}
+
 
 .content__video-card-title {
   font-weight: 700;
@@ -245,7 +244,7 @@ max-width: 196px;
   justify-content: space-between;
   cursor: pointer;
   flex: 1 1 auto;
-  margin-top: 9px;  
+  margin-top: 9px;
 }
 
 .search-form__fieldset {
