@@ -298,7 +298,7 @@ max-width: 196px;
 
 .button:focus-visible {
   outline: 1px solid #FFF;
-  padding: 4px;
+  padding: 2px;
 }
 
 .search-form button {
