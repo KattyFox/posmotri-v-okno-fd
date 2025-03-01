@@ -309,7 +309,7 @@ max-width: 196px;
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 15px;
   width: 100%;
 }
 
