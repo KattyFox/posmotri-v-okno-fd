@@ -62,9 +62,8 @@ ol {
   "result details"
   "result details";
   grid-template-columns: minmax(234px, 711px) minmax(200px, 399px);
-  row-gap: 0; /* Вертикальный промежуток */
+  row-gap: 0;
   column-gap: 30px;
-  /*width: 100%;*/
   max-width: 1140px;
   width: 100%;
   align-items: end;
@@ -139,6 +138,7 @@ outline: none;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 196px;
+  margin-top: 5px;
 }
 
 .result {
@@ -146,7 +146,6 @@ outline: none;
   flex-direction: column;
   width: 100%;
   margin-top: 78px;
-  margin-left: 8px;
 }
 
 .result__video-container {
@@ -169,7 +168,6 @@ outline: none;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  min-width: 390px;
 }
 
 .title {
@@ -181,7 +179,7 @@ outline: none;
   text-transform: uppercase;
   margin-top: 2px;
   color: #FFF;
-  margin-bottom: 26px;
+  margin-bottom: 29px;
 }
 
 .content__accent {
@@ -205,6 +203,7 @@ outline: none;
   font-size: 30px;
   max-width: 196px;
   margin-bottom: 6px;
+  margin-right: -11px;
   }
 
 .search-form__fieldset,
@@ -245,9 +244,8 @@ max-width: 196px;
   flex-wrap: wrap;
   justify-content: space-between;
   cursor: pointer;
-  padding-top: 1px;
   flex: 1 1 auto;
-  margin-top: 7px;
+  margin-top: 9px;  
 }
 
 .search-form__fieldset {
@@ -255,7 +253,7 @@ max-width: 196px;
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 5px;
 }
 
 .button {
@@ -280,7 +278,6 @@ max-width: 196px;
   background: none;
   margin-top: auto;
   padding: 6px 70.5px 6px;
-  margin-bottom: 13px;
 }
 
 .more-button {
@@ -306,7 +303,6 @@ max-width: 196px;
 }
 
 .search-form button {
-  gap: 10px;
   flex-shrink: 0;
 }
   
@@ -315,6 +311,7 @@ max-width: 196px;
   display: flex;
   flex-direction: row;
   gap: 12px;
+  width: 100%;
 }
 
 .search-form__pseudo-checkbox {
@@ -344,7 +341,7 @@ max-width: 196px;
 .search-form__label {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   cursor: pointer;
   width: fit-content;
   color: #FFF;
@@ -367,7 +364,6 @@ max-width: 196px;
   font: inherit;
   line-height: normal;
   appearance: none;
-  margin-bottom: 15px;
 }
 
 .search-form__label-text {
@@ -384,7 +380,7 @@ max-width: 196px;
 
 .search-form__label:has(:focus-visible) {
   border: 1px solid #FFF;
-  padding: 4px;
+padding: 4px;
 }
 
 .search-form__label:hover .search-form__label-text {
