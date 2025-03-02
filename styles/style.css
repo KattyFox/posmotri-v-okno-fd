@@ -116,13 +116,13 @@ ol {
   font-style: normal;
 }
 
-.content__video-card:focus {
+.content__card-link:focus {
 outline: none;
 }
 
-.content__video-card:focus-visible {
-  outline-color: white;
-  outline-width: 1px;
+.content__card-link:focus-visible {
+  outline: 1px solid white;
+  /*outline-width: 1px;*/
   outline-offset: 1px;
 }
 
@@ -244,7 +244,7 @@ max-width: 196px;
   justify-content: space-between;
   cursor: pointer;
   flex: 1 1 auto;
-  margin-top: 9px;
+  /*margin-top: 9px;*/
 }
 
 .search-form__fieldset {
@@ -272,9 +272,9 @@ max-width: 196px;
 }
 
 .search-form__submit-button {
-  display: flex;
+  /*display: flex;*/
   min-width: 194px;
-  background: none;
+  /*background: none;*/
   margin-top: auto;
   padding: 6px 70.5px 6px;
 }
@@ -353,8 +353,8 @@ max-width: 196px;
 .search-form__textfield {
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
-  min-height: 26px;
-  min-width: 234px;
+  min-height: 27px;
+  min-width: 225px;
   color: rgba(255, 255, 255, 0.70);
   background: none;
   border-left: none;
