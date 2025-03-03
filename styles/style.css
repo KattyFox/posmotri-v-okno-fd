@@ -71,6 +71,7 @@ ol {
 
 .content__card-link {
   text-decoration: none;
+  display: block;
 }
 
 .content__card-link:hover .content__video-card-title,
@@ -78,8 +79,8 @@ ol {
   text-decoration: underline;
 }
 
-.content__card-link:active .content__video-card {
-  background-color: rgba(255, 255, 255, 0.2);
+.content__card-link_current {
+  background-color: rgb(255 255 255 / 20%);
 }
 
 .content__list {
